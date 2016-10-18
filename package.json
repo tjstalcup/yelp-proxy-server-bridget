@@ -4,7 +4,7 @@
   "description": "Proxy Server for the YELP API",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon index.js"
+    "start": "node index.js"
   },
   "author": "TJ Stalcup",
   "license": "ISC",
