@@ -24,6 +24,21 @@ app.get('/api/search/:search/:location', function(req,res){
   });
 });
 
+app.get('/api/business/:business', function(req,res){
+  res.set({
+    'Access-Control-Allow-Origin': '*',
+    'Content-Type': 'text/javascript; charset=UTF-8',
+    'Cache-Control': 'public, max-age=28800'
+  });
+  yelp.business(req.params.business)
+  .then(function (data) {
+    res.send(data);
+  })
+  .catch(function (err) {
+    res.send(err);
+  });
+});
+
 app.listen(process.env.PORT || 8080, function(){
   console.log('listening on http://localhost:8080');
 });
