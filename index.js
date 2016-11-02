@@ -9,13 +9,13 @@ var yelp = new Yelp({
   token_secret: '_5T-EJA8Bl4WUC_0-3H8eNayUW0',
 });
 
-app.get('/api/search/:search/:location', function(req,res){
+app.get('/api/search/:radius/:location', function(req,res){
   res.set({
     'Access-Control-Allow-Origin': '*',
     'Content-Type': 'text/javascript; charset=UTF-8',
     'Cache-Control': 'public, max-age=28800'
   });
-  yelp.search({ term: req.params.search, location: req.params.location })
+  yelp.search({ term: "lunch", location: req.params.location, limit: 10, sort: 1, radius_filter: req.params.radius })
   .then(function (data) {
     res.send(data);
   })
