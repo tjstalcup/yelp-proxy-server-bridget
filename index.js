@@ -3,10 +3,10 @@ var app = express();
 var Yelp = require('yelp');
 
 var yelp = new Yelp({
-  consumer_key: '2U_kt6835XE97-emSYXJJw',
-  consumer_secret: 'BwXZT63zoEllOWAnhInNVMrJXPw',
-  token: 'zpwNq2qmjpl4bEOOHhYNc_bHpgiU5Itv',
-  token_secret: '_5T-EJA8Bl4WUC_0-3H8eNayUW0',
+  consumer_key: 'o5WlNJkfPxgXNgC9VUvrAQ',
+  consumer_secret: 'quI2oBuTlsZdzX544UVhL4YaD6s',
+  token: 'KU6chDhw8OWOxkA4hXKDSoJYAav7WWdG',
+  token_secret: 'FHXrR-WdLCTXpiKs4vcwhTAduAg'
 });
 
 app.get('/api/search/:radius/:location', function(req,res){
